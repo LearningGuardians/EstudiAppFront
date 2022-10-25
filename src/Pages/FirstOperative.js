@@ -1,7 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
-import CameraIcon from '@mui/icons-material/PhotoCamera';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,14 +9,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from '../components/Header';
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3, 4];
 
 const theme = createTheme();
 
@@ -27,7 +24,6 @@ export default function Album() {
       <CssBaseline />
       <Header />
       <main>
-        {/* Hero unit */}
         <Box
           sx={{
             bgcolor: 'background.paper',
@@ -43,12 +39,12 @@ export default function Album() {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+                Bienvenido a Learning Guardians
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+            Este es un espacio orientado para ayudar a los estudiantes en falencias académicas en ciertas áreas, 
+            donde el alumno no sienta el estudiar como una obligación de horas, 
+            si no como una actividad que se puede repartir de manera que su vida cotidiana no se vea afectada
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -56,8 +52,7 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
+              <Button variant="contained">Crear Plan de Estudios</Button>
             </Stack>
           </Container>
         </Box>
@@ -97,7 +92,6 @@ export default function Album() {
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
           Footer
@@ -111,7 +105,6 @@ export default function Album() {
           Something here to give the footer a purpose!
         </Typography>
       </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }
