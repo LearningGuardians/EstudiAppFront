@@ -1,14 +1,11 @@
 import React from "react";
 import ClockPicker from "../components/ClockPicker";
 import Header from "../components/Header";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import {
-    Accordion, AccordionSummary, AccordionDetails, TextField, Autocomplete,
+    TextField, Autocomplete,
     createTheme, ThemeProvider, Stack, Typography, Box, Container,
     CssBaseline, Fab, Chip, IconButton, Button
 } from '@mui/material';
-import QuizIcon from '@mui/icons-material/Quiz';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 

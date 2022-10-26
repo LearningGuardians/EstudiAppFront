@@ -13,12 +13,17 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from '../components/Header';
+import getRequests from '../utils/APIServices';
 
 const cards = [1, 2, 3, 4];
 
 const theme = createTheme();
 
 export default function Album() {
+
+    const prueba = () => {
+      getRequests.UseFetchGET()
+  }
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -52,7 +57,7 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Crear Plan de Estudios</Button>
+              <Button variant="contained" onClick={prueba}>Crear Plan de Estudios</Button>
             </Stack>
           </Container>
         </Box>
