@@ -4,7 +4,8 @@ import Card from '@mui/joy/Card';
 import Typography from '@mui/joy/Typography';
 import ImageIcon from '@mui/icons-material/Image';
 
-export default function BasicRatio() {
+
+export default function OperativePlan() {
   return (
     <Card variant="outlined" sx={{ width: 300 }}>
       <AspectRatio>
