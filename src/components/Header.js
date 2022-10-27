@@ -45,9 +45,9 @@ function Header(props) {
               </Grid>
               <Grid>
                 <Tabs value={0} textColor="inherit" centered>
-                  <Tab label="Mi Perfil" />
-                  <Tab label="Revisar Materias" />
-                  <Tab label="Mis Extracurriculares" />
+                  <Tab label="Mi Perfil" href=''/>
+                  <Tab label="Revisar Materias" href=''/>
+                  <Tab label="Mis Extracurriculares" href=''/>
                 </Tabs>
               </Grid>
             </Grid>

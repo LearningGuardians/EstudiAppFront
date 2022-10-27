@@ -14,16 +14,19 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from '../components/Header';
 import getRequests from '../utils/APIServices';
 import dataJSON from '../DataProof/DataFirstPage';
-
-const cards = dataJSON.proof2.PlanesOperativos;
-
-const theme = createTheme();
+import { useNavigate } from 'react-router-dom';
 
 export default function Album() {
+  const cards = dataJSON.proof2.PlanesOperativos;
+  const theme = createTheme();  
+  const navigate = useNavigate();
 
-    const prueba = () => {
-      getRequests.UseFetchGET()
-  }
+  const redirect = () => {
+    navigate("/pOperativo/create");
+}
+
+
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -57,7 +60,7 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained" onClick={prueba}>Crear Plan de Estudios</Button>
+              <Button variant="contained" href='/pOperativo/create'>Crear Plan de Estudios</Button>
             </Stack>
           </Container>
         </Box>
