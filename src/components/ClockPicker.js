@@ -8,13 +8,7 @@ import { StaticTimePicker } from '@mui/x-date-pickers/StaticTimePicker';
 import { Container } from '@mui/system';
 import { TimePicker } from '@mui/x-date-pickers';
 
-export default function ClockPicker() {
-    const [value, setValue] = useState(dayjs('2022-04-07'));
-    const [valor, setValor] = useState("Hola perras");
-
-    const actValor = () => {
-
-    };
+export default function ClockPicker({value, setValue}){
 
     return (
         <Container maxWidth="xs">
