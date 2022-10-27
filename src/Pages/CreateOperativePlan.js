@@ -27,17 +27,32 @@ const materias = [
 //     )
 // };
 
-export default function CreateView() {
+export default function CreateOperativeplan() {
 
+    const [materia,setMateria] = useState("");
     const [arrivalTime, setArrivalTime] = useState(dayjs('2022-04-07'))
     const [startTime, setStartTime] = useState(dayjs('2022-04-07'))
     const [endTime, setEndTime] = useState(dayjs('2022-04-07'))
+    const [extrarricularName, setExtrarricularName] = useState("")
+    const [razon, setRazon] = useState("");
+    const [operativePlan, setOperativePlan] = useState({});
 
+
+    const handleSubmit = () =>{
+        setOperativePlan({
+            "materia": materia,
+            "HoraLlegada":arrivalTime['$H'] + ":" + arrivalTime['$m'],
+            "Actividad":{
+                "Nombre":extrarricularName,
+                "HoraLlegada":startTime['$H']+":"+endTime['$m'],
+                "HoraFin":endTime['$H']+":"+arrivalTime['$m']
+            },
+            "Razon":razon
+        });
+        console.log(materia,razon);
+    }
     useEffect(() => {
-        console.log(`Arrival Time ${arrivalTime['$d']}`)
-        console.log(`Start time ${startTime['$d']}`)
-        console.log(`End Time ${endTime['$d']}`)
-    }, [arrivalTime, startTime, endTime])
+    }, [materia,setOperativePlan]);
 
     return (
         <ThemeProvider theme={theme}>
@@ -60,11 +75,15 @@ export default function CreateView() {
                                     Seleccione la materia que desea reforzar
                                 </Typography>
                                 <Autocomplete
+                                    onChange={(newValue) => {
+                                        setMateria(newValue)
+                                    }}
                                     disablePortal
                                     id="combo-box-demo"
                                     options={materias}
                                     sx={{ width: 300 }}
-                                    renderInput={(params) => <TextField {...params} label="Subject" />}
+                                    renderInput={(params) => <TextField {...params} label="Subject" />
+                                }
                                 />
                             </Stack>
                             <Stack direction="row" spacing={3} >
@@ -77,7 +96,11 @@ export default function CreateView() {
                                 <Typography mr="sx">
                                     Nombre
                                 </Typography>
-                                <TextField id="outlined-basic" label="Actividad Extrarricular" variant="outlined" />
+                                <TextField id="outlined-basic"
+                                 onChange={(newValue)=>{
+                                    setExtrarricularName(newValue.currentTarget.value);
+                                    console.log("Value: " + newValue.currentTarget.value);
+                                 }} label="Actividad Extrarricular" variant="outlined" />
                             </Stack>
                             <Stack direction="row" spacing={2}>
                                 <Typography>
@@ -92,28 +115,21 @@ export default function CreateView() {
                                 <ClockPicker value={endTime} setValue={setEndTime} />
                             </Stack>
                             <Stack direction="row" spacing={2}>
-                                {/* <Typography>
-                                    Seleccione la razón
-                                </Typography>
-                                <Fab variant="extended">
-                                    <QuizIcon sx={{ mr: 1 }}/>
-                                    Examen
-                                </Fab>
-                                <Container maxWidth="xs">
-                                    <Button variant="contained" startIcon={<FontAwesomeIcon icon={QuizIcon} />}>
-                                        Examen
-                                    </Button>
-                                    <Chip Icon={<QuizIcon />} label="Prueba" />
-                                </Container> */}
                                 <Typography>
                                     Seleccione la razón
                                 </Typography>
-                                <Button>Examen</Button>
-                                <Button>Quiz</Button>
-                                <Button>Estudio</Button>
+                                <Button onClick={(event)=> {
+                                    setRazon("Examen");
+                                }}>Examen</Button>
+                                <Button onClick={(event)=> {
+                                    setRazon("Quiz");
+                                }}>Quiz</Button>
+                                <Button onClick={(event)=> {
+                                    setRazon("Estudio");
+                                }}>Estudio</Button>
                             </Stack>
                             <Container maxWidth="sm">
-                                <Button size="small" variant="contained">Crear plan de estudio</Button>
+                                <Button onClick={handleSubmit} size="small" variant="contained">Crear plan de estudio</Button>
                             </Container>
                         </Stack>
                     </Container>
