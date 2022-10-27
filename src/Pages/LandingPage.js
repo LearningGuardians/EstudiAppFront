@@ -54,7 +54,7 @@ function LandingPage(props){
             
             </Box>
             <Container>
-            <Button variant="contained" href="/login">
+            <Button variant="contained" size="large" href="/login">
                 INICIA AQUI
             </Button>
             </Container>
