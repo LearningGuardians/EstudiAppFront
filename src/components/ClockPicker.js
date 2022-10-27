@@ -8,12 +8,18 @@ import { StaticTimePicker } from '@mui/x-date-pickers/StaticTimePicker';
 import { Container } from '@mui/system';
 import { TimePicker } from '@mui/x-date-pickers';
 
-export default function ClockPicker({value, setValue}){
+export default function ClockPicker(val, setVal) {
+    const [value, setValue] = useState(dayjs('2022-04-07'));
+    const [valor, setValor] = useState("Hola perras");
+
+    const actValor = () => {
+
+    };
 
     return (
         <Container maxWidth="xs">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-                {/* <StaticTimePicker
+                <StaticTimePicker
                     ampm
                     orientation="portrait"
                     openTo="minutes"
@@ -21,9 +27,11 @@ export default function ClockPicker({value, setValue}){
                     onChange={(newValue) => {
                         setValue(newValue);
                     }}
+                    onAccept={(newValue) => {setValor(newValue);
+                    }}
                     renderInput={(params) => <TextField {...params} />}
                     toolbarTitle=""
-                /> */}
+                />
                 <TimePicker
                     value={value}
                     onChange={setValue}
