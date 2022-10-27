@@ -1,6 +1,6 @@
 import axios from 'axios';
 let UseFetchGET=  () => {
-    var URL_API = 'http://localhost:8080/pOperativo/prueba';
+    var URL_API = 'http://localhost:8080/pOperativo/all/Jose';
     axios.get(URL_API)
         .then(function(res){
         console.log("FUNCIONAL")

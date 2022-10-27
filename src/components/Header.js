@@ -43,13 +43,15 @@ function Header(props) {
                   Learning Guardians
                 </Typography>
               </Grid>
+              <Grid>
+                <Tabs value={0} textColor="inherit" centered>
+                  <Tab label="Mi Perfil" />
+                  <Tab label="Revisar Materias" />
+                  <Tab label="Mis Extracurriculares" />
+                </Tabs>
+              </Grid>
             </Grid>
           </Toolbar>
-          <Tabs value={0} textColor="inherit" centered>
-            <Tab label="Mi Perfil" />
-            <Tab label="Revisar Materias" />
-            <Tab label="Mis Extracurriculares" />
-          </Tabs>
         </AppBar>
       </HideOnScroll>
 
