@@ -1,0 +1,33 @@
+[
+    {
+      "hexa": "#1D1148",
+      "title": "Actividad 1",
+      "description": "Descipcion 1",
+      "image": "https://educacion30.b-cdn.net/wp-content/uploads/2017/12/tecnicas-de-estudio.jpg"
+    },
+    {
+      "hexa": "#FFCD00",
+      "title": "Actividad 1",
+      "description": "Descipcion 2",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlHFq21loSqyx3AOuLYO4vq_JUjA3qoopkfQ&usqp=CAU"
+    },
+    {
+      "hexa": "#FF5041",
+      "title": "Actividad 3",
+      "description": "Descipcion 3",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgwDIat5i6iwqbukjVSWDb4n2AbtqkrYAI0g&usqp=CAU"
+    },
+    {
+      "hexa": "#000000",
+      "title": "Actividad 4",
+      "description": "Descipcion 4",
+      "image": "https://userscontent2.emaze.com/images/f59a1b02-52ae-4146-bf2e-0f491020e84e/8bb110a17590f0c9073a48fad7309f62.jpg"
+    },
+    {
+      "hexa": "#FFCD00",
+      "title": "Actividad 5 - Video",
+      "description": "https://www.youtube.com/watch?v=EMk6nom1aS4",
+      "image": "https://i.ytimg.com/an_webp/rLoWMU4L_qE/mqdefault_6s.webp?du=3000&sqp=CMaC7JoG&rs=AOn4CLBZc4VGuJMI3CmlDHvUplxehTB72g"
+    }
+  ]
+  
