@@ -13,8 +13,9 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from '../components/Header';
 import getRequests from '../utils/APIServices';
+import dataJSON from '../DataProof/DataFirstPage';
 
-const cards = [1, 2, 3, 4];
+const cards = dataJSON.proof2.PlanesOperativos;
 
 const theme = createTheme();
 
@@ -72,23 +73,21 @@ export default function Album() {
                     component="img"
                     sx={{
                       // 16:9
-                      pt: '56.25%',
+                      pt: '0%',
                     }}
-                    image="https://source.unsplash.com/random"
+                    image={require('./public/logo192.png')}
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                    <Typography gutterBottom variant="h5" component="h2" >
+                      {card.nombreMateria}
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      {card.info}
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="small">Continuar</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -98,15 +97,7 @@ export default function Album() {
       </main>
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
+          @LearningGuardians
         </Typography>
       </Box>
     </ThemeProvider>
