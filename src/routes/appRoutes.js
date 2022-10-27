@@ -4,12 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FirstOperative from "../Pages/FirstOperative";
 
 
-export default function appRoutes() {
+export default function AppRoutes() {
 
     return (
         <Router>
             <header>
-                <NavBar />
             </header>
 
             <main>
