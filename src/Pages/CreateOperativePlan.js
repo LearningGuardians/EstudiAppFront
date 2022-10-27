@@ -44,8 +44,8 @@ export default function CreateOperativeplan() {
             "HoraLlegada":arrivalTime['$H'] + ":" + arrivalTime['$m'],
             "Actividad":{
                 "Nombre":extrarricularName,
-                "HoraLlegada":startTime,
-                "HoraFin":endTime
+                "HoraLlegada":startTime['$H']+":"+endTime['$m'],
+                "HoraFin":endTime['$H']+":"+arrivalTime['$m']
             },
             "Razon":razon
         });
