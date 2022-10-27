@@ -1,12 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
-
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
     <div className="App">
-          <Header />
+      {/* <FirstOperative /> */}
+      {/* <OperativePlan /> */}
+      {/* <Container maxWidth="sm"> */}
+        {/* <ClockPicker /> */}
+      {/* </Container> */}
+      <AppRoutes />
+      
+
     </div>
   );
 }
