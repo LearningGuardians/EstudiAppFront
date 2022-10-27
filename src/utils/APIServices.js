@@ -1,9 +1,11 @@
 import axios from 'axios';
-let UseFetchGET=  () => {
-    var URL_API = 'http://localhost:8080/pOperativo/all/Jose';
+const UseFetchGET=  () => {
+    var URL_API = 'http://localhost:8080/operativo/all/Diego';
     axios.get(URL_API)
-        .then(function(res){
-        console.log("FUNCIONAL")
+        .then(function(response){
+            response.headers("Access-Control-Allow-Origin", "*");
+            response.status(200);
+        console.log(response.data)
         })
         .catch(function (error) {
             console.log(error)
