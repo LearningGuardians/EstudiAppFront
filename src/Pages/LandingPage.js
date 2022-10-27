@@ -30,47 +30,35 @@ function LandingPage(props){
                 pt: 8,
                 pb: 6,
             }}
-            >
-            <Container maxWidth="sm" disableGutters="True" sx={align="left"} >
-                <Typography
-                component="h1"
-                variant="h2"
-                align="left"
-                color="text.primary"
-                gutterBottom
-                >
-                    Bienvenido a Learning Guardians
-                </Typography>
-                <Typography variant="h5" align="left" color="text.secondary" paragraph>
-                Este es un espacio orientado para ayudar a los estudiantes en falencias académicas en ciertas áreas, 
-                donde el alumno no sienta el estudiar como una obligación de horas, 
-                si no como una actividad que se puede repartir de manera que su vida cotidiana no se vea afectada
-                </Typography>
-                <Stack
-                sx={{ pt: 4 }}
-                flexDirection="ltr"
-                spacing={2}
-                justifyContent="center"
-                
-                >
-                </Stack>
-            </Container>
-            </Box>
             
-        </main>
-        <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-            <Typography variant="h6" align="center" gutterBottom>
-            Footer
-            </Typography>
-            <Typography
-            variant="subtitle1"
-            align="center"
-            color="text.secondary"
-            component="p"
             >
-            Something here to give the footer a purpose!
+            <img src="https://content.api.news/v3/images/bin/afb92595cf1385ee8ffaf27e4fa806b8" width="1000" align="right" style={{margin: "40px"}}/>
+            <Typography
+            component="h1"
+            variant="h2"
+            align="left"
+            color="text.primary"
+            gutterBottom
+            maxWidth="sm"
+            margin="70px"
+            fontFamily='monospace'
+            >
+                Learning Guardians
             </Typography>
-        </Box>
+            <Typography variant="h5" fontFamily='monospace' align="left" color="text.secondary" margin="70px" maxWidth="sm" paragraph>
+            La solucion para tus habitos de Estudios
+            Aprende como administrar mejor tus sesiones y potencia al maximo tus resultados.
+            Con Learning Guardians y su Increible Sistema de Estudio basado en las metodologias mas modernas del 
+            sector podrás impulsar tus rutinas y aprenderas mejor y mas rapidamente.
+            </Typography>
+            
+            </Box>
+            <Container>
+            <Button variant="contained" href="/login">
+                INICIA AQUI
+            </Button>
+            </Container>
+        </main>
         </ThemeProvider>
      );
  }
